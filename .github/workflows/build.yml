@@ -34,29 +34,17 @@ jobs:
         major: ${{ steps.get_major_version.outputs.info }}
         minor: ${{ steps.get_minor_version.outputs.info }}
       run: echo "build_number=`bash ./get-build-number.sh -M ${major} -m ${minor}`" >> $GITHUB_OUTPUT
-    - name: Restore
-      run: dotnet restore ./NeuralFoil.NET.sln
-    - name: Build
-      run: >
-        dotnet build
-        -c Release
-        --no-restore
-        -p:BuildNumber=${{ steps.get_build_number.outputs.build_number }}
-        ./NeuralFoil.NET.sln
     - name: Test
       run: >
         dotnet test
         -c Release
-        --no-restore
-        --no-build
+        -p:BuildNumber=${{ steps.get_build_number.outputs.build_number }}
         ./NeuralFoil.NET.sln
-    - name: Pack
+    - name: Build and Pack
       run: >
         dotnet pack
         -c Release
-        --no-restore
-        --no-build
-        -p:BuildNumber=${{ steps.get_build_number.outputs.build_number }}
+        --version ${{ steps.get_major_version.outputs.info }}.${{ steps.get_minor_version.outputs.info }}.${{ steps.get_build_number.outputs.build_number }}
         ./src/NeuralFoil.NET/NeuralFoil.NET.csproj
     - name: Create release
       uses: softprops/action-gh-release@v3
