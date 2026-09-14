@@ -1,0 +1,3 @@
+[submodule "NeuralFoil"]
+	path = NeuralFoil
+	url = https://github.com/peterdsharpe/NeuralFoil.git

@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>NeuralFoil</AssemblyName>
+    <RootNamespace>NeuralFoil</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="nn_weights_and_biases\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\NeuralFoil\neuralfoil\nn_weights_and_biases\nn-large.npz" Link="nn_weights_and_biases\nn-large.npz">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\NeuralFoil\neuralfoil\nn_weights_and_biases\nn-medium.npz" Link="nn_weights_and_biases\nn-medium.npz">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\NeuralFoil\neuralfoil\nn_weights_and_biases\nn-small.npz" Link="nn_weights_and_biases\nn-small.npz">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\NeuralFoil\neuralfoil\nn_weights_and_biases\nn-xlarge.npz" Link="nn_weights_and_biases\nn-xlarge.npz">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\NeuralFoil\neuralfoil\nn_weights_and_biases\nn-xsmall.npz" Link="nn_weights_and_biases\nn-xsmall.npz">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\NeuralFoil\neuralfoil\nn_weights_and_biases\nn-xxlarge.npz" Link="nn_weights_and_biases\nn-xxlarge.npz">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\NeuralFoil\neuralfoil\nn_weights_and_biases\nn-xxsmall.npz" Link="nn_weights_and_biases\nn-xxsmall.npz">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\NeuralFoil\neuralfoil\nn_weights_and_biases\nn-xxxlarge.npz" Link="nn_weights_and_biases\nn-xxxlarge.npz">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\NeuralFoil\neuralfoil\nn_weights_and_biases\scaled_input_distribution.npz" Link="nn_weights_and_biases\scaled_input_distribution.npz">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
