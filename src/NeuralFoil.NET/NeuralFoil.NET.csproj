@@ -23,7 +23,7 @@
       <Link>nn_weights_and_biases\%(RecursiveDir)/%(FileName)%(Extension)</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
-      <PackagePath>contentFiles/any/netstandard2.1</PackagePath>
+      <PackagePath>contentFiles/any/netstandard2.1/nn_weights_and_biases</PackagePath>
       <PackageCopyToOutput>true</PackageCopyToOutput>
     </None>
   </ItemGroup>
