@@ -61,13 +61,9 @@ jobs:
     - name: Create release
       uses: softprops/action-gh-release@v3
       env:
-        RELEASE: v${{ needs.build.outputs.version }}
+        RELEASE: v${{ steps.get_major_version.outputs.info }}.${{ steps.get_minor_version.outputs.info }}.${{ steps.get_build_number.outputs.build_number }}
       with:
         target_commitish: release
         tag_name: ${{ env.RELEASE }}
         name: ${{ env.RELEASE }}
         files: ./src/artifacts/package/release/*.nupkg
-    - name: Tag repo with version
-      uses: rickstaa/action-create-tag@v1
-      with:
-        tag: v${{ steps.get_major_version.outputs.info }}.${{ steps.get_minor_version.outputs.info }}.${{ steps.get_build_number.outputs.build_number }}
