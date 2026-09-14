@@ -1,0 +1,19 @@
+version: 2
+updates:
+  - package-ecosystem: nuget
+    directory: /src
+    target-branch: dev
+    registries: "*"
+    schedule:
+      interval: weekly
+    labels:
+      - "nuget"
+      - "dependencies"
+  - package-ecosystem: github-actions
+    directory: /
+    target-branch: dev
+    schedule:
+      interval: weekly
+    labels:
+      - "github-actions"
+      - "dependencies"
