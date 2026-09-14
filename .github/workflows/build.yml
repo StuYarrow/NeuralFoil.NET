@@ -60,15 +60,13 @@ jobs:
         ./src/NeuralFoil.NET/NeuralFoil.NET.csproj
     - name: Create release
       uses: softprops/action-gh-release@v3
+      env:
+        RELEASE: v${{ needs.build.outputs.version }}
       with:
-        repository: StuYarrow/NeuralFoil.NET
-        target_commitish: main
+        target_commitish: release
         tag_name: ${{ env.RELEASE }}
         name: ${{ env.RELEASE }}
         files: ./src/artifacts/package/release/*.nupkg
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        RELEASE: v${{ needs.build.outputs.version }}
     - name: Tag repo with version
       uses: rickstaa/action-create-tag@v1
       with:
