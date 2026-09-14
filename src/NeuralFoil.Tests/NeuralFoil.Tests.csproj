@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\NeuralFoil\NeuralFoil.csproj" />
+    <ProjectReference Include="..\..\src\NeuralFoil.NET\NeuralFoil.NET.csproj" />
   </ItemGroup>
 
 </Project>

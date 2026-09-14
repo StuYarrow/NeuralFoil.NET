@@ -1,8 +1,5 @@
 namespace NeuralFoil;
 
-using MathNet.Numerics.LinearAlgebra;
-using MathNet.Numerics.LinearAlgebra.Double;
-
 /// <summary>
 /// A pure C# port of NeuralFoil's inference core (<c>get_aero_from_kulfan_parameters</c>). Evaluates the
 /// trained multilayer perceptron for a given airfoil (expressed in Kulfan/CST parameters) and set of flow

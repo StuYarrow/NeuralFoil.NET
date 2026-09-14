@@ -1,0 +1,22 @@
+﻿<Project>
+
+  <!-- Assembly metadata common to the whole solution -->
+  <PropertyGroup>
+    <ProductName>NeuralFoil.NET</ProductName>
+    <Copyright>Copyright (C) Stuart Yarrow 2026-$([System.DateTime]::Today.Year.ToString())</Copyright>
+
+    <!-- Set major and minor version here -->
+    <!-- The GitHub build action accesses this file by a hardcoded path to read these tags -->
+    <MajorVersion>1</MajorVersion>
+    <MinorVersion>0</MinorVersion>
+    <!-- Build number is set by GitHub -->
+    <BuildNumber Condition="'$(BuildNumber)'==''">9999</BuildNumber>
+
+    <!-- Automatic version -->
+    <VersionPrefix>$(MajorVersion).$(MinorVersion).$(BuildNumber)</VersionPrefix>
+    
+    <!-- Needed to suppress git commit SHA with .NET 8 SDK -->
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+  </PropertyGroup>
+
+</Project>

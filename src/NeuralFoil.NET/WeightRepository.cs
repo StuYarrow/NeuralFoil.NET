@@ -1,11 +1,5 @@
 namespace NeuralFoil;
 
-using System.Collections.Concurrent;
-
-using MathNet.Numerics.LinearAlgebra;
-using MathNet.Numerics.LinearAlgebra.Double;
-
-
 /// <summary>A single dense (fully-connected) layer: <c>y = W·x + b</c>.</summary>
 internal sealed class DenseLayer(Matrix<double> weight, Vector<double> bias)
 {

@@ -2,10 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
-    <AssemblyName>NeuralFoil</AssemblyName>
+    <AssemblyName>NeuralFoil.NET</AssemblyName>
+	<AssemblyTitle>NeuralFoil.NET</AssemblyTitle>
+    <Description>Port of NeuralFoil core inference to .NET.</Description>
+	<PackageId>NeuralFoil.NET</PackageId>
+	<RepositoryUrl>https://github.com/StuYarrow/NeuralFoil.NET</RepositoryUrl>
     <RootNamespace>NeuralFoil</RootNamespace>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
