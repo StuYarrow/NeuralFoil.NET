@@ -19,13 +19,17 @@
   <ItemGroup>
     <None Include="..\..\LICENSE.txt" Pack="true" PackagePath="" />
     <None Include="..\..\README.md" Pack="true" PackagePath="" />
+
+    <!-- Weights: copied locally for this repo's tests and packed for use by package consumers. -->
     <None Include="..\..\NeuralFoil\neuralfoil\nn_weights_and_biases\*.npz">
-      <Link>nn_weights_and_biases\%(RecursiveDir)/%(FileName)%(Extension)</Link>
+      <Link>nn_weights_and_biases\%(FileName)%(Extension)</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Pack>true</Pack>
-      <PackagePath>contentFiles/any/netstandard2.1/nn_weights_and_biases</PackagePath>
-      <PackageCopyToOutput>true</PackageCopyToOutput>
+      <PackagePath>build\nn_weights_and_biases</PackagePath>
     </None>
+
+    <!-- Auto-imported by consuming projects; injects the weight-file copy without visible items. -->
+    <None Include="build\NeuralFoil.NET.targets" Pack="true" PackagePath="build\" />
   </ItemGroup>
 
   <ItemGroup>

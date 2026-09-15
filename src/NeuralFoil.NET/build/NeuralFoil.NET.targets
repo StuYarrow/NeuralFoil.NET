@@ -1,0 +1,10 @@
+<Project>
+  <!-- Copies the packaged NeuralFoil weight files to the consumer's output without adding visible project items. -->
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)nn_weights_and_biases\*.npz">
+      <Link>nn_weights_and_biases\%(FileName)%(Extension)</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Visible>false</Visible>
+    </None>
+  </ItemGroup>
+</Project>
